@@ -27,6 +27,34 @@ The best support to provide GeoPackage is using QGIS 3.XX.
 Create Geopackage
 ^^^^^^^^^^^^^^^^^
 
+ArcMap
+""""""""
+
+1. Create SQLite DB - https://desktop.arcgis.com/en/arcmap/10.4/tools/data-management-toolbox/create-sqlite-database.htm 
+2. Choose as spatial_type parameter GEOPACKAGE which will create an OGC GeoPackage dataset. This is essentially an SQLite database with ST_Geometry storage plus some extra OGC features.
+
+You can use this workspace very much like any SQLite geodatabase, that is load/export feature classes and tables and create views. 
+
+Example: Load ESRI GeoDatabase to sqlite - https://tereshenkov.wordpress.com/2016/12/17/load-esri-geodatabase-tables-into-sqlite/ 
+
+If you have raster data you can use the tool - https://desktop.arcgis.com/en/arcmap/latest/tools/conversion-toolbox/add-raster-to-geopackage.htm 
+
+ArcPro
+"""""""
+
+For overview - https://community.esri.com/community/open-platform-standards-and-interoperability/blog/2019/08/14/how-can-i-use-ogc-geopackages-in-arcgis-pro 
+
+"Move your data into the GeoPackage like this:
+
+1. Create a GeoPackage with the Create SQLite Database tool (using the GeoPackage spatial type)
+2. Use the Copy tool (Data Management, General toolset) to add vector data, or Copy/Paste in the Catalog pane
+3. Use the Add Raster to GeoPackage tool (Conversion, To GeoPackage toolset) to add raster mosaics
+
+Your GeoPackage is now ready for use."
+
+QGIS
+""""""
+
 1. Download QGIS 3.8
 2. Import current data
 3. Make any styling changes required
@@ -40,8 +68,8 @@ Create Geopackage
 
 Should now find your geopackage where ever you selected to save it. Drag and drop it into a new QGIS window to check it's output is as expected.
 
-Create Geopackage (alternative route)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+GDAL
+""""""
 
 1. Download GDAL
 2. Check it has GeoPackage support using `ogrinfo --formats`
