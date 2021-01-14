@@ -1,3 +1,5 @@
+# ARCHIVED
+
 # GeoERA GIP/EGDI Documentation
 
 Hosted at: https://geoera-gip.github.io/documentation/
